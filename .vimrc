@@ -26,7 +26,7 @@ syntax on
 let mapleader=","
 
 " Easy tab switching
-noremap <S-l> gt
+noremap <> gt
 noremap <S-h> gT
 
 "remap esc key in insert mode
@@ -54,10 +54,10 @@ inoremap `` ``<Left>
 " =================== Navigation ====================
 
 "normal mode navigations 
-nmap <Up>    <Nop>
-nmap <Down>  <Nop>
-nmap <Left>  <Nop>
-nmap <Right> <Nop>
+"nmap <Up>    <Nop>
+"nmap <Down>  <Nop>
+"nmap <Left>  <Nop>
+"nmap <Right> <Nop>
 map $ <Nop>
 map ^ <Nop>
 map { <Nop>
@@ -84,7 +84,6 @@ set nowb
 
 " ================ Indentation ======================
 
-set autoindent
 set smartindent
 set smarttab
 set shiftwidth=2
@@ -202,15 +201,15 @@ map <Leader>r <esc>:NERDTreeFind<cr>
 
 " ====== Make tabs be addressable via Apple+1 or 2 or 3, etc
 " Use numbers to pick the tab you want (like iTerm)
-map <silent> <D-1> :tabn 1<CR>
-map <silent> <D-2> :tabn 2<CR>
-map <silent> <D-3> :tabn 3<cr>
-map <silent> <D-4> :tabn 4<cr>
-map <silent> <D-5> :tabn 5<cr>
-map <silent> <D-6> :tabn 6<cr>
-map <silent> <D-7> :tabn 7<cr>
-map <silent> <D-8> :tabn 8<cr>
-map <silent> <D-9> :tabn 9<cr>
+map <silent> <C-1> :tabn 1<cr>
+map <silent> <C-2> :tabn 2<cr>
+map <silent> <C-3> :tabn 3<cr>
+map <silent> <C-4> :tabn 4<cr>
+map <silent> <C-5> :tabn 5<cr>
+map <silent> <C-6> :tabn 6<cr>
+map <silent> <C-7> :tabn 7<cr>
+map <silent> <C-8> :tabn 8<cr>
+map <silent> <C-9> :tabn 9<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory

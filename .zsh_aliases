@@ -5,6 +5,9 @@ alias python3=/usr/local/bin/python3.6
 alias python=/usr/local/bin/python3.7
 alias pip=/usr/local/bin/pip3.7
 
+# Zsh aliases
+ZSHRC=/Users/jefflai/.zshrc
+
 # CS225 aliases
 alias potd="cd ~/Courses/cs225/potd/"
 alias mvpsh="mv ~/Downloads/*.sh ~/Courses/cs225/potd"
@@ -17,6 +20,7 @@ alias tunes="open /Applications/iTunes.app"
 alias dox="open -a 'Microsoft Word'"
 alias chrome="open -a 'Google Chrome'"
 alias email="open /Applications/Mail.app"
+alias msg="open /Applications/Messages.app"
 
 # Computing resources 
 alias bw="ssh -X lai@bw.ncsa.illinois.edu"
@@ -30,6 +34,9 @@ alias arxiv="pyarxiv-cli"
 alias todo="~/todo-list/todo"
 alias todone="~/todo-list/todone"
 alias reinforce="source ~/reinforce/bin/activate"
+alias gcd="greatestCommonDemoninator"
+
+# window aliases
 alias full="resize-full"
 alias quart="resize-quarter"
 alias half="resize-half"

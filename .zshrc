@@ -109,9 +109,13 @@ export MATPLOTLIBRC="$HOME/.matplotlib"
 setopt extended_glob 
 unsetopt nomatch
 
+unalias gcd
+
 # Aliases and functions
-source ~/.zsh_aliases
-source ~/.zsh_functions/funcs
-source ~/.zsh_functions/math_funcs
+source ~/Documents/dotfiles/.zsh_aliases
+source ~/Documents/dotfiles/.zsh_functions/funcs
+source ~/Documents/dotfiles/.zsh_functions/math_funcs
 
 export PROMPT_EOL_MARK=''
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+
