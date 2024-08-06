@@ -11,9 +11,9 @@ fi
 
 for file in "$DOTFILES_DIR"/.*; do
 
-  if [ "$file" == "$DOTFILES_DIR/." ] || \
-     [ "$file" == "$DOTFILES_DIR/.." ] || \
-     [ "$file" == "$DOTFILES_DIR/.git" ]; then
+  if [ "$file" = "$DOTFILES_DIR/." ] || \
+     [ "$file" = "$DOTFILES_DIR/.." ] || \
+     [ "$file" = "$DOTFILES_DIR/.git" ]; then
     continue
   fi
 
