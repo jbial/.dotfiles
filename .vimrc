@@ -19,18 +19,21 @@ set hidden
 "turn on syntax highlighting
 syntax on
 
+
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
 let mapleader=","
 
+"turn off search highlighting
+nnoremap <leader>h :noh<cr>
+
 " Easy tab switching
-noremap <> gt
-noremap <S-h> gT
+noremap gr gT
 
 "remap esc key in insert mode
-imap jj <Esc>
+imap jj <Esc><Right>
 
 "easy window switching
 nnoremap <C-J> <C-W><C-J>
@@ -50,6 +53,10 @@ inoremap [] []<Left>
 inoremap "" ""<Left>
 inoremap '' ''<Left>
 inoremap `` ``<Left>
+
+"Enter line break or newline without entering insert mode
+nnoremap <leader>o o<Esc>
+nnoremap <leader>j r<Cr>
 
 " =================== Navigation ====================
 
@@ -86,9 +93,9 @@ set nowb
 
 set smartindent
 set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set expandtab
 
 filetype plugin on
