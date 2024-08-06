@@ -17,8 +17,6 @@ for file in "$DOTFILES_DIR"/.*; do
     continue
   fi
 
-  echo $file
-
   # Create the symlink in the home directory
-  #ln -s "$file" "$HOME/$(basename $file)"
+  ln -s "$file" "$HOME/$(basename $file)"
 done
