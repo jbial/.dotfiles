@@ -9,13 +9,16 @@ if [ ! -d "$DOTFILES_DIR" ]; then
   exit 1
 fi
 
-# Loop through each file in the DOTFILES_DIR
 for file in "$DOTFILES_DIR"/.*; do
-  # Skip the special directories . and ..
-  if [ "$file" == "$DOTFILES_DIR/." ] || [ "$file" == "$DOTFILES_DIR/.." ]; then
+
+  if [ "$file" == "$DOTFILES_DIR/." ] || \
+     [ "$file" == "$DOTFILES_DIR/.." ] || \
+     [ "$file" == "$DOTFILES_DIR/.git" ]; then
     continue
   fi
 
+  echo $file
+
   # Create the symlink in the home directory
-  ln -s "$file" "$HOME/$(basename $file)"
+  #ln -s "$file" "$HOME/$(basename $file)"
 done
