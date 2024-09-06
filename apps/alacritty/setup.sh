@@ -4,7 +4,6 @@ echo "[SETTING UP ALACRITTY]"
 mkdir -p ~/.config/alacritty/themes
 git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 
-mkdir ~/.config/alacritty
-ln -s ~/.dotfiles/alacritty/alacritty.toml ~/.config/alacritty
+ln -vs ~/.dotfiles/apps/alacritty/alacritty.toml ~/.config/alacritty
 
 
