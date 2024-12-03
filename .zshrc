@@ -86,6 +86,11 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# fun with scheme
+scheme () {
+    mit-scheme --quiet < "$1"
+}
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -101,21 +106,16 @@ export PROMPT="${ret_status} %{$fg[cyan]%}%c%{$reset_color%} "
 setopt extended_glob 
 unsetopt nomatch
 
+# disable accented keys for press and hold
+if [[ "$(uname)" == "Darwin" ]]; then
+  defaults write -g ApplePressAndHoldEnabled -bool false
+fi
+
+bindkey '^J' down-line-or-history  # Ctrl + J for down
+bindkey '^K' up-line-or-history    # Ctrl + K for up
+
 export PROMPT_EOL_MARK=''
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/jbial/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/jbial/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/jbial/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/jbial/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+. "$HOME/.cargo/env"
+export PATH="/Users/jbial/.cargo/bin:/Users/jbial/.local/bin:$PATH"

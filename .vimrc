@@ -29,6 +29,9 @@ let mapleader=","
 "turn off search highlighting
 nnoremap <leader>h :noh<cr>
 
+" remap Y to yank to end of line
+nnoremap Y y$
+
 " Easy tab switching
 noremap gr gT
 
