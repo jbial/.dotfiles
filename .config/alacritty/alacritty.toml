@@ -19,5 +19,5 @@ live_config_reload = true
     opacity = 0.9
     blur = true
     
-    option_as_alt = 'Both'
+    option_as_alt = 'OnlyLeft'
 

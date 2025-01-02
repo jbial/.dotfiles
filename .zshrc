@@ -113,6 +113,8 @@ fi
 
 bindkey '^J' down-line-or-history  # Ctrl + J for down
 bindkey '^K' up-line-or-history    # Ctrl + K for up
+bindkey '^H' backward-word    # Ctrl + H for previous word
+bindkey '^L' forward-word    # Ctrl + L for next word 
 
 export PROMPT_EOL_MARK=''
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION

@@ -163,28 +163,12 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Make Git pervasive in vim ( :Gblame + Glog + many more )
 Plugin 'tpope/vim-fugitive'
- 
-" file navigator gutter
 Plugin 'scrooloose/nerdtree.git'
-
-" Command+T replacement (ctrl+P)
 Plugin 'kien/ctrlp.vim'
-
-" Make it look amazing 
-Plugin 'altercation/vim-colors-solarized'
-
-" Pimped out bar at the bottom of current buffer
 Plugin 'bling/vim-airline.git'
 Plugin 'vim-airline/vim-airline-themes'
-
-" Highlights class names + methods more brightly
-" Handy for seeing syntax shape before your eyes
 Plugin 'vim-scripts/TagHighlight.git'
-
-" Search everything in the current dir via :Ack
 Plugin 'mileszs/ack.vim'
-
-" Enable Markdown Preview + GitHub flavored markdown
 Plugin 'jtratner/vim-flavored-markdown.git'
 Plugin 'nelstrom/vim-markdown-preview'
 
@@ -249,7 +233,7 @@ let g:solarized_visibility="normal"
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 syntax enable
-set background=dark
-colorscheme solarized
+set background=light
+"colorscheme solarized
 highlight clear LineNr
 
