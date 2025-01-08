@@ -102,10 +102,6 @@ scheme () {
 export TERM=xterm-256color
 export PROMPT="${ret_status} %{$fg[cyan]%}%c%{$reset_color%} "
 
-# Globbing bs
-setopt extended_glob 
-unsetopt nomatch
-
 # disable accented keys for press and hold
 if [[ "$(uname)" == "Darwin" ]]; then
   defaults write -g ApplePressAndHoldEnabled -bool false
@@ -116,8 +112,3 @@ bindkey '^K' up-line-or-history    # Ctrl + K for up
 bindkey '^H' backward-word    # Ctrl + H for previous word
 bindkey '^L' forward-word    # Ctrl + L for next word 
 
-export PROMPT_EOL_MARK=''
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
-
-. "$HOME/.cargo/env"
-export PATH="/Users/jbial/.cargo/bin:/Users/jbial/.local/bin:$PATH"
