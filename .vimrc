@@ -24,7 +24,7 @@ syntax on
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
-let mapleader=","
+let mapleader=" "
 
 "turn off search highlighting
 nnoremap <leader>h :noh<cr>
@@ -70,10 +70,6 @@ nnoremap <leader>j r<Cr>
 "nmap <Right> <Nop>
 map $ <Nop>
 map ^ <Nop>
-map { <Nop>
-map } <Nop>
-noremap K     {
-noremap J     }
 noremap H     ^
 noremap L     $
 noremap <C-x> :bp<Bar>bd #<Cr>
