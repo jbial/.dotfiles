@@ -9,20 +9,20 @@ mouse-hide-while-typing = true
 
 font-family = "ZedMono Nerd Font Mono"
 font-style = "Extended"
-font-size = 15
+font-size = 12
 
 window-padding-x = 10
 window-padding-y = 20
 window-padding-balance = true
-window-decoration = false
+window-decoration = auto
 window-colorspace = "display-p3"
 
-macos-titlebar-style = hidden
+macos-titlebar-style = transparent
 macos-option-as-alt = true
 macos-non-native-fullscreen = true
 
 keybind = global:cmd+ctrl+s=toggle_quick_terminal
-
+keybind = cmd+s>w=new_window
 keybind = cmd+s>r=reload_config
 keybind = cmd+s>f=toggle_fullscreen
 keybind = cmd+s>x=close_surface
@@ -35,8 +35,6 @@ keybind = cmd+s>j=goto_split:bottom
 keybind = cmd+s>k=goto_split:top
 keybind = cmd+s>h=goto_split:left
 keybind = cmd+s>l=goto_split:right
-
 keybind = cmd+s>z=toggle_split_zoom
-
 keybind = cmd+s>e=equalize_splits
 
