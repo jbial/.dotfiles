@@ -112,5 +112,3 @@ bindkey '^K' up-line-or-history    # Ctrl + K for up
 bindkey '^H' backward-word    # Ctrl + H for previous word
 bindkey '^L' forward-word    # Ctrl + L for next word 
 
-
-. "$HOME/.local/bin/env"

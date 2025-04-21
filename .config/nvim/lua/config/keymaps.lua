@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
-map("i", "jj", "<ESC>")
+map("i", "jj", "<ESC>l")
 
 map({ "n", "i" }, "<leader>s", function()
   vim.cmd("write") -- Save the file
