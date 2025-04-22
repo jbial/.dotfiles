@@ -30,6 +30,8 @@ let mapleader=","
 nnoremap <leader>h :noh<cr>
 
 " remap Y to yank to end of line
+nnoremap y "+y
+vnoremap y "+y
 nnoremap Y y$
 
 " Easy tab switching
