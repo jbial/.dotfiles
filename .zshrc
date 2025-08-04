@@ -101,6 +101,7 @@ scheme () {
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export TERM=xterm-256color
 export PROMPT="${ret_status} %{$fg[cyan]%}%c%{$reset_color%} "
+export GIT_EDITOR=vim
 
 # disable accented keys for press and hold
 if [[ "$(uname)" == "Darwin" ]]; then
