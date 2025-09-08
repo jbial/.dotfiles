@@ -1,1 +1,12 @@
-../../../../.dotfiles/.config/nvim/lua/plugins/colorscheme.lua
+return {
+  {
+    "rebelot/kanagawa.nvim",
+    opts = {},
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "kanagawa-dragon",
+    },
+  },
+}
