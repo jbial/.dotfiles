@@ -9,7 +9,7 @@ mouse-hide-while-typing = true
 
 font-family = "ZedMono Nerd Font Mono"
 font-style = "Extended"
-font-size = 12
+font-size = 8
 
 window-padding-x = 10
 window-padding-y = 20
