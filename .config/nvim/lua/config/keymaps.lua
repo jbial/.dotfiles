@@ -8,3 +8,6 @@ map({ "n", "i" }, "<leader>s", function()
     vim.cmd("stopinsert") -- Exit insert mode
   end
 end, { desc = "Save file and exit insert mode" })
+
+-- remap escape terminal mode
+map("t", "<ESC>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })

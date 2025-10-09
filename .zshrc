@@ -91,6 +91,10 @@ scheme () {
     mit-scheme --quiet < "$1"
 }
 
+precmd() {
+  echo -ne "\033]0;$(hostname)\007"
+}
+preexec() { : }
 
 ssh-hostname() { 
   ssh -G "$1" 2>/dev/null | grep "^hostname " | cut -d" " -f2; 

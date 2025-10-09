@@ -22,8 +22,6 @@ syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
-" the plugins.
 let mapleader=","
 
 "turn off search highlighting
@@ -134,60 +132,6 @@ set wildignore+=*.png,*.jpg,*.gif
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 5, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 5, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 5, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 5, 4)<CR>
-
-" ========================================
-" Vim plugin configuration
-" ========================================
-"
-" This file contains the list of plugin installed using vundle plugin manager.
-" Once you've updated the list of plugin, you can run vundle update by issuing
-" the command :PluginInstall from within vim or directly invoking it from the
-" command line with the following syntax:
-" vim --noplugin -u vim/vundles.vim -N "+set hidden" "+syntax on" +PluginClean! +PluginInstall +qall
-" Filetype off is required by vundle
-
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle (required)
-Plugin 'VundleVim/Vundle.vim'
-
-""""""""""""""""""""""""""""""""" MY VUNDLES """""""""""""""""""""""
-" HEAVILY/MOSTLY taken from https://github.com/skwp/dotfiles 
-
-
-" Make Git pervasive in vim ( :Gblame + Glog + many more )
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline.git'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/TagHighlight.git'
-Plugin 'mileszs/ack.vim'
-Plugin 'jtratner/vim-flavored-markdown.git'
-Plugin 'nelstrom/vim-markdown-preview'
-Plugin 'terryma/vim-smooth-scroll'
-
-" END OF VUNDLE PLUGINS
-""""""""""""""""""""""""""""""""""""""""""""""""
-call vundle#end()
-filetype plugin indent on     " required!
-"
-" Brief help
-" :PluginList          - list configured bundles
-" :PluginInstall(!)    - install(update) bundles
-" :PluginSearch(!) foo - search(or refresh cache first) for foo
-" :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Plugin command are not allowed..
 
 " NERDTree Mappins
 " Open Nerd Tree with <Leader>n
@@ -196,47 +140,17 @@ map <Leader>n <esc>:NERDTreeToggle<cr>
 " Reveal current file in NERDTree with <Leader>r
 map <Leader>r <esc>:NERDTreeFind<cr>
 
-" ====== Make tabs be addressable via Apple+1 or 2 or 3, etc
-" Use numbers to pick the tab you want (like iTerm)
-map <silent> <C-1> :tabn 1<cr>
-map <silent> <C-2> :tabn 2<cr>
-map <silent> <C-3> :tabn 3<cr>
-map <silent> <C-4> :tabn 4<cr>
-map <silent> <C-5> :tabn 5<cr>
-map <silent> <C-6> :tabn 6<cr>
-map <silent> <C-7> :tabn 7<cr>
-map <silent> <C-8> :tabn 8<cr>
-map <silent> <C-9> :tabn 9<cr>
+" ====== Cycle tabs with ctrl + H/L
+map <silent> <C-H> :tabprevious<cr>
+map <silent> <C-L> :tabNext<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
-" ===== Add some shortcuts for ctags
-map <Leader>tt <esc>:TagbarToggle<cr>
-" TODO later, get open tag in new tab working
-" http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
-" map <C-\>:tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-"map <A-]>:vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-" Support for github flavored markdown
-" via https://github.com/jtratner/vim-flavored-markdown
-" with .md extensions
-augroup markdown
-    au!
-    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
-
 "" Airline settings
-let g:airline_section_c = '%{strftime("%c")}'
-let g:airline_theme = 'dark'
+let g:airline_theme = 'minimalist'
 
-" Color theme (drawing from altercation/vim-colors-solarized Plugin)
-let g:solarized_visibility="normal"
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-syntax enable
-set background=light
-"colorscheme solarized
-highlight clear LineNr
-
+"" Theme Settings
+colorscheme slate
+set background=dark
