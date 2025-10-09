@@ -19,7 +19,6 @@ set hidden
 "turn on syntax highlighting
 syntax on
 
-
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 let mapleader=","
@@ -35,12 +34,6 @@ noremap gr gT
 
 "remap esc key in insert mode
 imap jj <Esc><Right>
-
-"easy window switching
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 "Save with leader+s
 nnoremap <leader>s :w<cr>
@@ -77,14 +70,6 @@ noremap <C-x> :bp<Bar>bd #<Cr>
 set noswapfile
 set nobackup
 set nowb
-
-" ================ Persistent Undo ==================
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
-" NOT WORKING: Didnt work when yanked right out of YADR
-"silent !mkdir ~/.vim/backups > /dev/null 2>&1
-"set undodir=~/.vim/backups
-"set undofile
 
 " ================ Indentation ======================
 
@@ -125,6 +110,20 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
+" ================ Buffers ========================
+
+" Map leader + number to jump to buffers 1–9
+nnoremap <leader>1 :b1<CR>
+nnoremap <leader>2 :b2<CR>
+nnoremap <leader>3 :b3<CR>
+nnoremap <leader>4 :b4<CR>
+nnoremap <leader>5 :b5<CR>
+nnoremap <leader>6 :b6<CR>
+nnoremap <leader>7 :b7<CR>
+nnoremap <leader>8 :b8<CR>
+nnoremap <leader>9 :b9<CR>
+nnoremap <leader>0 :b#<CR>
+
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
@@ -137,10 +136,6 @@ map <Leader>n <esc>:NERDTreeToggle<cr>
 
 " Reveal current file in NERDTree with <Leader>r
 map <Leader>r <esc>:NERDTreeFind<cr>
-
-" ====== Cycle tabs with ctrl + H/L
-map <silent> <C-H> :tabprevious<cr>
-map <silent> <C-L> :tabNext<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory

@@ -14,6 +14,7 @@ plugins=(
     "vim-airline https://github.com/vim-airline/vim-airline.git"
     "vim-airline-themes https://github.com/vim-airline/vim-airline-themes.git"
     "vim-smoothie https://github.com/psliwka/vim-smoothie.git"
+    "vim-tmux-navigator https://github.com/christoomey/vim-tmux-navigator.git"
 )
 
 for entry in "${plugins[@]}"; do
