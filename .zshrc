@@ -9,6 +9,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+alias activate="source .venv/bin/activate"
 
 export LANG=en_US.UTF-8
 
