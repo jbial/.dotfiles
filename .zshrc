@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="afowler"
 
 plugins=(
-    git vi-mode 
+    git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -45,6 +45,6 @@ bindkey '^J' down-line-or-history  # Ctrl + J for down
 bindkey '^K' up-line-or-history    # Ctrl + K for up
 bindkey '^H' backward-word    # Ctrl + H for previous word
 bindkey '^L' forward-word    # Ctrl + L for next word 
-
+bindkey '\e^?' backward-delete-word  # Alt+Delete deletes word backward
 
 . "$HOME/.local/bin/env"
