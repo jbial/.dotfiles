@@ -6,7 +6,9 @@ plugins=(
     git
 )
 
-source $ZSH/oh-my-zsh.sh
+if [ -f "$ZSH/oh-my-zsh.sh" ]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
 
 # User configuration
 alias activate="source .venv/bin/activate"
@@ -66,4 +68,6 @@ zle -N zle-keymap-select
 # Add vi mode indicator to prompt
 PROMPT='${PS1_VI_MODE} '$PROMPT
 
-. "$HOME/.local/bin/env"
+if [ -f "$HOME/.local/bin/env" ]; then
+  . "$HOME/.local/bin/env"
+fi
